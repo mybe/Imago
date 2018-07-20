@@ -9,6 +9,9 @@ body { font-family: Roboto, sans-serif;; max-width: 100%; overflow-x: hidden; mi
 @media screen and (max-width: 800px) { .column { -ms-flex: 50%; flex: 50%; max-width: 50%; } }
 @media screen and (max-width: 600px) { .column { -ms-flex: 100%; flex: 100%; max-width: 100%; }}
 
+.close2 { position: absolute; top: 80px; right: 40px; color: #706f6f; font-size: 30px; font-weight: bold; }
+.close2:hover { font-size: 31px; color: #000; }
+
 .tab { overflow: hidden; background-color: #fff; border-radius: 10px; }
 .tab button { background-color: inherit; float: left; border: none; outline: none; padding: 14px 16px; transition: 0.3s; }
 .tablinks { text-align: center; margin: 0px 40px; float: left; display: inline-block; font-size: 17px; color: #000; }
@@ -17,7 +20,7 @@ body { font-family: Roboto, sans-serif;; max-width: 100%; overflow-x: hidden; mi
 .tabcontent { display: none; padding: 6px 12px; border-top: none; text-align: center; }
 .tabtitle { font-family: Arial, sans-serif; }
 
-.navbar, .navbar-default, .navbar-light { position: fixed; width: 100%; background: #fff; background-color: #fff; }
+.navbar, .navbar-default, .navbar-light { position: fixed; width: 100%; background: #fff; background-color: #fff; z-index: 2; }
 .navbar-brand { font-family: 'Pacifico'; color: #000;}
 .searchnavbtn:hover { background-color: #fff !important; color: #fff !important; }
 

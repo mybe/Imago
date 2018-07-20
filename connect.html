@@ -17,18 +17,17 @@
                <h1>Login to Imago</h1>
             </div>
          </div>
-         <a style="text-decoration: none" href="#" onclick="displayImages()" data-toggle="collapse" data-target="#displaylogin" class="close2">&times;</a>
-         <form class="register-form">
+            <form class="register-form">
             <input type="text" placeholder="email address"/>  
             <input type="text" placeholder="username"/>
             <input type="password" placeholder="password"/>
-            <button>create</button>
+            <button>Register</button>
             <p class="message">Already registered? <a href="#">Sign In</a></p>
          </form>
          <form class="login-form">
             <input type="text" placeholder="username"/>
             <input type="password" placeholder="password"/>
-            <button>login</button>
+            <button>Login</button>
             <p class="message">Not registered? <a href="#">Create an account</a></p>
          </form>
       </div>
@@ -46,8 +45,6 @@
 .form input  { padding: 15px; border-radius: 3px;  box-sizing: border-box; font-size: 14px; }
 .form button { outline: 0;width: 100%; border: 0; padding: 15px; border-radius: 3px; color: #FFFFFF; font-size: 14px; cursor: pointer; transition: all 0.3 ease; }
 .form button { background: -webkit-linear-gradient(to right, #56ab2f, #a8e063); background: linear-gradient(to right, #56ab2f, #a8e063); }
-.close2 { position: absolute; top: 15px; right: 35px; color: #706f6f; font-size: 30px; font-weight: bold; }
-.close2:hover { font-size: 31px; color: #000; }
 .form .message { margin: 15px 0 0; color: #b3b3b3; font-size: 14px; }
 .form .message a { color: #56ab2f; text-decoration: underline; font-size: 14px; }
 .form .register-form { display: none; }
@@ -64,10 +61,7 @@ body:before { content: ""; position: fixed; top: 0; left: 0; display: block; bac
 </style>
 
 <script>
-
-
 $('.message a').click(function(){
         $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
      });
 </script>
-<script src="script2.js"></script>
