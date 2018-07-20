@@ -1,0 +1,47 @@
+/*Imago, Henry Jack, 2018. All rights reserved.*/
+* { box-sizing: border-box; }
+body { font-family: Arial; max-width: 100%; overflow-x: hidden; min-height: 100%; }
+.frm-image { width: 100%; }
+.row { display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; padding: 0 10px; }
+.column { -ms-flex: 33%; flex: 33%; max-width: 33%; padding: 0px 5px 0px 15px; }
+.column img { margin-top: 18px; vertical-align: middle; }
+@media screen and (max-width: 800px) { .column { -ms-flex: 50%; flex: 50%; max-width: 50%; } }
+@media screen and (max-width: 600px) { .column { -ms-flex: 100%; flex: 100%; max-width: 100%; }}
+
+.tab { overflow: hidden; background-color: #fff; border-radius: 10px; }
+.tab button { background-color: inherit; float: left; border: none; outline: none; padding: 14px 16px; transition: 0.3s; }
+.tablinks { text-align: center; margin: 0px 40px; float: left; display: inline-block; font-size: 17px; color: #000; }
+.tab button:hover { background-color: #55B4B0; cursor: pointer; }
+.tab button.active { background-color: #95DEE3; }
+.tabcontent { display: none; padding: 6px 12px; border-top: none; text-align: center; }
+.tabtitle { font-family: 'Arimo'; font-weight: lighter; }
+
+.navbar, .navbar-default, .navbar-light { position: fixed; width: 100%; background: #fff; background-color: #fff; }
+.navbar-brand { font-family: 'Pacifico'; color: #000;}
+.searchnavbtn:hover { background-color: #fff !important; color: #fff !important; }
+
+.fas, .nav-link { display: inline-block; }
+.fas { color: #28A745}
+.nav-item { margin: 0px 100px; }
+.nav-link { color: #4A4A4B !important; } .nav-link:hover { color: #2b5eaf !important; }
+.upload-icon { background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59); -webkit-background-clip: text; -webkit-text-fill-color: transparent;  }
+.user-icon { background: linear-gradient(to right, #4e54c8, #8f94fb); -webkit-background-clip: text; -webkit-text-fill-color: transparent;  } 
+.upload-class { border: 1px solid rgba(194, 194, 194, .5); border-radius: 12px; padding: 2px 6px; margin: -2px -6px; max-width: 150px; }
+
+@media (min-width: 1225px){
+    .navbar-expand-custom { flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; }
+    .navbar-expand-custom .navbar-nav { flex-direction: row; }
+    .navbar-expand-custom .navbar-nav .nav-link { padding-right: .5rem; padding-left: .5rem; }
+    .navbar-expand-custom .navbar-collapse { display: flex !important; }
+    .navbar-expand-custom .navbar-toggler { display: none; }
+}
+
+#imgx { border-radius: 5px; cursor: pointer; transition: 0.3s; }
+.modal { display: none; position: fixed; z-index: 1; padding-top: 100px; left: 0; top: 0; width: 100%; height: 100%; }
+.modal { overflow: auto; background-color: rgb(0, 0, 0); background-color: rgba(0, 0, 0, 0.9); }
+.modal-content { margin: auto; display: block; width: auto; height: 90%; border: 1px solid white; }
+#captionNew, #captionTrend { margin: auto; display: block; width: 80%; text-align: center; color: #ccc; padding: 10px 0; height: 150px; }
+.modal-content, #captionNew, #captionTrend { animation-name: zoom; animation-duration: 0.4s; }
+.closeNew, .closeTrend { position: absolute; top: 15px; right: 35px; color: #ccc; font-size: 40px; font-weight: bold; }
+.closeNew:hover, .closeNew:focus, .closeTrend:hover, .closeTrend:focus { color: #fff; font-size: 42px; text-decoration: none; cursor: pointer; }
+@keyframes zoom { from { transform: scale(0) } to { transform: scale(1) } }
