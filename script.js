@@ -1,3 +1,12 @@
+function displayImages() {
+    var x = document.getElementById("allimagescontainer");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
 document.getElementById("defaultOpen").click();
  function myFunction(id) {
      var x = document.getElementById(id);

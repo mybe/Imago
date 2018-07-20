@@ -1,3 +1,9 @@
+<!-- 
+Imago, 2018, Henry Jack. All rights reserved. 
+Login/Signup form originally made by Andy Tran, edited by Henry Jack 
+Some code used from w3schools, edited by Henry Jack 
+-->
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -10,7 +16,7 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
-      <link href="https://fonts.googleapis.com/css?family=Palanquin+Dark|Pacifico|Sarala|Cabin|Hind:500,300|Marck+Script|Arimo" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto" rel="stylesheet">
       <link href="style.css" rel="stylesheet">
    </head>
    <body>
@@ -27,7 +33,7 @@
                   <i class="fas fa-home"></i><a class="nav-link" href="#">Home</a>
                </li>
                <li class="nav-item">
-                  <i class="fas fa-user user-icon"></i><a class="nav-link" href="#">Sign Up/Login</a>
+                  <i class="fas fa-user user-icon"></i><a href="#" class="nav-link" onclick="displayImages()" data-toggle="collapse" data-target="#displaylogin">Sign Up/Login</a>
                </li>
                <li class="nav-item">
                   <div class="upload-class">
@@ -42,6 +48,11 @@
          </div>
       </nav><br><br><br>
 
+      <div id="displaylogin" class="collapse">
+          <iframe src="connect.html" height="575px" width="100%" name="targetframe" allowTransparency="true" scrolling="no" frameborder="0" ></iframe>
+      </div>
+
+      <div id="allimagescontainer">
       <!-- Trending and New Tab -->
       <div class="tab">
          <button class="tablinks" onclick="openTabType(event, 'Trending-TabType')" id="defaultOpen">Trending</button>
@@ -124,6 +135,7 @@
             </div>
          </div>
       </div>
+    </div>
 
    </body>
 </html>
