@@ -1,10 +1,22 @@
 function displayImages() {
-    var x = document.getElementById("allimagescontainer");
-    if (x.style.display === "none") {
-        x.style.display = "block";
+    var x = document.getElementById("displaylogin");
+    var y = document.getElementById("allimagescontainer");
+    if (y.style.display === "none") {
+        y.style.display = "block";
+        x.style.display = "none"; 
     } else {
-        x.style.display = "none";
+        y.style.display = "none";
+        x.style.display = "block"; 
     }
+}
+
+function toggleHome() {
+    var x = document.getElementById("displaylogin");
+    var y = document.getElementById("allimagescontainer");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+        y.style.display = "block"; 
+    } 
 }
 
 document.getElementById("defaultOpen").click();

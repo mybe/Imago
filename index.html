@@ -31,10 +31,10 @@ Some code used from w3schools, edited by Henry Jack
          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                <li class="nav-item active">
-                  <i class="fas fa-home"></i><a class="nav-link ultext" href="#">&nbsp;Home</a>
+                  <i class="fas fa-home"></i><a class="nav-link ultext" href="#" onclick="toggleHome()">&nbsp;Home</a>
                </li>
                <li class="nav-item">
-                  <i class="fas fa-user user-icon"></i><a href="#" class="nav-link ultext" onclick="displayImages()" data-toggle="collapse" data-target="#displaylogin">&nbsp;Sign Up/Login</a>
+                  <i class="fas fa-user user-icon"></i><a href="#" class="nav-link ultext" onclick="displayImages()">&nbsp;Sign Up/Login</a>
                </li>
                <li class="nav-item">
                   <div class="upload-class">
@@ -42,7 +42,7 @@ Some code used from w3schools, edited by Henry Jack
                </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search images, profiles.." style="width: 80%; border-radius:5px 0px 0px 5px;" >
+              <input class="form-control mr-sm-2" type="search" placeholder="Search images, users.." style="width: 80%; border-radius:5px 0px 0px 5px;" >
               <button class="btn btn-outline-success my-2 my-sm-0 searchnavbtn" type="submit" style="border-radius:0px 5px 5px 0px; margin-left: -8px;"><i class="fas fa-search"></i></button>
             </form>
             </div>
@@ -52,7 +52,7 @@ Some code used from w3schools, edited by Henry Jack
 
       <div id="displaylogin" class="collapse">
         <iframe src="connect.html" style="position: absolute; top: 0px; bottom: 0px; width: 100%; height: 100%;" allowTransparency="true" scrolling="no" frameborder="0" name="targetframe"></iframe>
-        <a style="text-decoration: none" href="#" onclick="displayImages()" data-toggle="collapse" data-target="#displaylogin" class="close2">&times;</a>
+        <a style="text-decoration: none" href="#" onclick="displayImages()"class="close2">&times;</a>
       </div>
 
       <div id="allimagescontainer">
