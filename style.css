@@ -21,7 +21,6 @@ body { font-family: Roboto, sans-serif;; max-width: 100%; overflow-x: hidden; mi
 .tabtitle { font-family: Arial, sans-serif; }
 
 .navbar, .navbar-default, .navbar-light { position: fixed; width: 100%; background: #fff; background-color: #fff; z-index: 2; }
-.navbar-brand { font-family: 'Pacifico'; color: #000;}
 .searchnavbtn:hover { background-color: #fff !important; color: #fff !important; }
 
 .fas, .nav-link { display: inline-block; }
