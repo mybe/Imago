@@ -9,6 +9,10 @@ body { font-family: Roboto, sans-serif;; max-width: 100%; overflow-x: hidden; mi
 @media screen and (max-width: 800px) { .column { -ms-flex: 50%; flex: 50%; max-width: 50%; } }
 @media screen and (max-width: 600px) { .column { -ms-flex: 100%; flex: 100%; max-width: 100%; }}
 
+
+
+.nav-item { padding-top: 3px; }
+
 .close2 { position: absolute; top: 80px; right: 40px; color: #706f6f; font-size: 30px; font-weight: bold; }
 .close2:hover { font-size: 31px; color: #000; }
 
@@ -30,7 +34,7 @@ body { font-family: Roboto, sans-serif;; max-width: 100%; overflow-x: hidden; mi
 .nav-link { color: #4A4A4B !important; } .nav-link:hover { color: #2b5eaf !important; }
 .upload-icon { background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59); -webkit-background-clip: text; -webkit-text-fill-color: transparent;  }
 .user-icon { background: linear-gradient(to right, #4e54c8, #8f94fb); -webkit-background-clip: text; -webkit-text-fill-color: transparent;  } 
-.upload-class { border: 1px solid rgba(194, 194, 194, .5); border-radius: 12px; padding: 2px 6px; margin: -2px -6px; max-width: 150px; }
+.upload-class { border: 1px solid rgba(194, 194, 194, .5); border-radius: 12px; padding: 2px 6px; margin: -2px -6px; max-width: 157px; margin-bottom: 3px; }
 
 @media (min-width: 1225px){
     .navbar-expand-custom { flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; }
@@ -43,9 +47,9 @@ body { font-family: Roboto, sans-serif;; max-width: 100%; overflow-x: hidden; mi
 #imgx { border-radius: 5px; cursor: pointer; transition: 0.3s; }
 .modal { display: none; position: fixed; z-index: 1; padding-top: 100px; left: 0; top: 0; width: 100%; height: 100%; }
 .modal { overflow: auto; background-color: rgb(0, 0, 0); background-color: rgba(0, 0, 0, 0.9); }
-.modal-content { margin: auto; display: block; width: auto; height: 90%; border: 1px solid white; }
+.modal-content { margin: auto; display: block; width: auto; height: 84%; border: 1px solid white; }
 #captionNew, #captionTrend { margin: auto; display: block; width: 80%; text-align: center; color: #ccc; padding: 10px 0; height: 150px; }
 .modal-content, #captionNew, #captionTrend { animation-name: zoom; animation-duration: 0.4s; }
-.closeNew, .closeTrend { position: absolute; top: 15px; right: 35px; color: #ccc; font-size: 40px; font-weight: bold; }
-.closeNew:hover, .closeNew:focus, .closeTrend:hover, .closeTrend:focus { color: #fff; font-size: 42px; text-decoration: none; cursor: pointer; }
+.closeNew, .closeTrend { position: absolute; top: 80px; right: 40px; color: #706f6f; font-size: 30px; font-weight: bold; }
+.closeNew:hover, .closeTrend:hover, .closeNew:focus, .closeTrend:focus { color: #fff; font-size: 32px; text-decoration: none; cursor: pointer; }
 @keyframes zoom { from { transform: scale(0) } to { transform: scale(1) } }
