@@ -5,7 +5,7 @@ body { font-family: Roboto, sans-serif;; max-width: 100%; overflow-x: hidden; mi
 .frm-image { width: 100%; }
 .row { display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 .column { -ms-flex: 33%; flex: 33%; max-width: 33%; padding-left: 1%; }
-.column img { margin-top: 18px; vertical-align: middle; padding-left: 5px; padding-right: 5px; }
+.column img { margin-top: 18px; vertical-align: middle; padding-left: 8px; padding-right: 8px; }
 @media screen and (max-width: 800px) { .column { -ms-flex: 50%; flex: 50%; max-width: 50%; } }
 @media screen and (max-width: 600px) { .column { -ms-flex: 100%; flex: 100%; max-width: 100%; }}
 
