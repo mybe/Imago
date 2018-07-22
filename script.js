@@ -86,3 +86,17 @@ document.getElementById("defaultOpen").click();
  span.onclick = function() {
      modalTrend.style.display = "none";
  }
+
+refresh_handler = function (e) {
+    var elements = document.querySelectorAll("*[realsrc]");
+    for (var i = 0; i < elements.length; i++) {
+        var boundingClientRect = elements[i].getBoundingClientRect();
+        if (elements[i].hasAttribute("realsrc") && boundingClientRect.top < window.innerHeight) {
+            elements[i].setAttribute("src", elements[i].getAttribute("realsrc"));
+            elements[i].removeAttribute("realsrc");
+        }
+    }
+};
+
+window.addEventListener('scroll', refresh_handler);
+window.addEventListener('load', refresh_handler);
