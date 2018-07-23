@@ -32,16 +32,6 @@ document.getElementById("defaultOpen").click();
      }
  }
 
- // Used to toggle the menu on smaller screens when clicking on the menu button
- function openNav() {
-     var x = document.getElementById("navDemo");
-     if (x.className.indexOf("w3-show") == -1) {
-         x.className += " w3-show";
-     } else {
-         x.className = x.className.replace(" w3-show", "");
-     }
- }
-
  function openTabType(evt, TabType) {
      // Declare all variables
      var i, tabcontent, tablinks;
@@ -113,6 +103,7 @@ refresh_handler = function (e) {
 window.addEventListener('scroll', refresh_handler);
 window.addEventListener('load', refresh_handler);
 
-$('.message a').click(function(){
-    $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+
+$('.message .tct').click(function(){
+    $('.formconnect').animate({height: "toggle", opacity: "toggle"}, "slow");
  });
