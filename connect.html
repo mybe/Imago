@@ -1,39 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <title>Flat Login Form</title>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-      <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900'>
-      <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Montserrat:400,700'>
-      <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
-      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-   </head>
-   <body>
-      <div class="container-fluid">
-      <div class="form">
-         <div class="container">
-            <div class="info">
-               <h1>Login to Imago</h1>
-            </div>
-         </div>
-            <form class="register-form">
-            <input type="text" placeholder="email address"/>  
-            <input type="text" placeholder="username"/>
-            <input type="password" placeholder="password"/>
-            <button>Register</button>
-            <p class="message">Already registered? <a href="#">Sign In</a></p>
-         </form>
-         <form class="login-form">
-            <input type="text" placeholder="username"/>
-            <input type="password" placeholder="password"/>
-            <button>Login</button>
-            <p class="message">Not registered? <a href="#">Create an account</a></p>
-         </form>
-      </div>
-    </div>
-   </body>
-</html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto'>
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+</head>
+<div class="connect-master">
+  <div class="container-fluid">
+  <div class="form">
+     <div class="container">
+        <div class="info">
+           <h1>Login to Imago</h1>
+        </div>
+     </div>
+        <form class="register-form">
+        <input type="text" placeholder="email address"/>  
+        <input type="text" placeholder="username"/>
+        <input type="password" placeholder="password"/>
+        <button>Register</button>
+        <p class="message">Already registered? <a href="#">Sign In</a></p>
+     </form>
+     <form class="login-form">
+        <input type="text" placeholder="username"/>
+        <input type="password" placeholder="password"/>
+        <button>Login</button>
+        <p class="message">Not registered? <a href="#">Create an account</a></p>
+     </form>
+  </div>
+</div>
+</div>
 
 <style>
 .form { position: relative; z-index: 1; background: #FFFFFF; max-width: 350px; margin: 0 auto 100px; padding: 30px; margin-top: 125px; }
@@ -55,13 +49,13 @@
 .container .info span { color: #4d4d4d; font-size: 12px; }
 .container .info span a { color: #000000; text-decoration: none; }
 .container .info span .fa { color: #EF3B3A; }
-body { background: #ccc; font-family: "Roboto", sans-serif; }
-body:before { content: ""; position: fixed; top: 0; left: 0; display: block; background: rgba(255, 255, 255, 0.8); width: 100%; height: 100%; }
+.connect-master { background: #ccc; font-family: "Roboto", sans-serif; }
+.connect-master { content: ""; position: fixed; top: 0; left: 0; display: block; background: rgba(204, 204, 204, 0.3); width: 100%; height: 100%; }
 .container-fluid { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); }
 </style>
 
 <script>
 $('.message a').click(function(){
-        $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
-     });
+    $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+ });
 </script>
