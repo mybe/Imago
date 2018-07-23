@@ -9,7 +9,7 @@ body { font-family: "Arial", sans-serif !important; max-width: 100%; overflow-x:
 @media screen and (max-width: 800px) { .column { -ms-flex: 50%; flex: 50%; max-width: 50%; } }
 @media screen and (max-width: 600px) { .column { -ms-flex: 100%; flex: 100%; max-width: 100%; }}
 
-.close2 { position: absolute; top: 80px; right: 40px; color: #706f6f; font-size: 30px; font-weight: bold; }
+.close2 { position: fixed; top: 80px; right: 40px; color: #706f6f; font-size: 30px; font-weight: bold; }
 .close2:hover { font-size: 31px; color: #000; }
 
 .tab { overflow: hidden; background-color: #fff; border-radius: 10px; }
