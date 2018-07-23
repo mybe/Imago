@@ -57,6 +57,12 @@ Some code used from w3schools, edited by Henry Jack
         <div data-include="connect.html"></div><a style="text-decoration: none" href="#" onclick="displayImages()"class="close2">&times;</a>
       </div>
 
+      <script>
+        $('.message a').click(function(){
+            $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+         });
+      </script>
+
       <div id="allimagescontainer">
       <!-- Trending and New Tab -->
       <div class="tab">

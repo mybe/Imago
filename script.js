@@ -112,3 +112,7 @@ refresh_handler = function (e) {
 
 window.addEventListener('scroll', refresh_handler);
 window.addEventListener('load', refresh_handler);
+
+$('.message a').click(function(){
+    $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+ });
