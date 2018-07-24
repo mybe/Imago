@@ -76,13 +76,12 @@ body { font-family: "Arial", sans-serif !important; max-width: 100%; overflow-x:
 .container .info span { color: #4d4d4d; font-size: 12px; }
 .container .info span a { color: #000000; text-decoration: none; }
 .container .info span .fa { color: #EF3B3A; }
-.connect-master { background: #ccc; font-family: "Roboto", sans-serif; }
+.connect-master { background: #ccc; font-family: "Arial", sans-serif; }
 .connect-master { content: ""; position: fixed; top: 0; left: 0; display: block; background: rgba(204, 204, 204, 0.3); width: 100%; height: 100%; }
 .container-fluid { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); }
 
 .showpass-area { margin-bottom: 12px; font-size: 14px; color: #1e6610; max-width: 200px; display: inline-block; }
 .showpass-area:hover { color: #a80000; }
-
 .fa-eye { color: #1e6610; } .showpass-area:hover .fa-eye { color: #a80000; }
 
 @keyframes fadeInUp {

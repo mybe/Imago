@@ -1,54 +1,59 @@
-function displayImages() {
-    var x = document.getElementById("displaylogin");
-    var y = document.getElementById("allimagescontainer");
-    if (y.style.display === "none") {
-        y.style.display = "block";
-        x.style.display = "none"; 
+function displayConnect() {
+    var x = document.getElementById("displayconnect");
+    var y = document.getElementById("displayupload");
+    var z = document.getElementById("allimagescontainer");
+    if (z.style.display === "none" & y.style.display === "none") {
+        z.style.display = "block";
+        x.style.display = "none";
+        y.style.display = "none";  
     } else {
-        y.style.display = "none";
+        z.style.display = "none";
+        y.style.display = "none";  
         x.style.display = "block"; 
     }
 }
 
-function toggleHome() {
-    var x = document.getElementById("displaylogin");
-    var y = document.getElementById("allimagescontainer");
-    if (x.style.display === "block") {
+function displayUpload() {
+    var x = document.getElementById("displayconnect");
+    var y = document.getElementById("displayupload");
+    var z = document.getElementById("allimagescontainer");
+    if (z.style.display === "none" & x.style.display === "none") {
+        z.style.display = "block";
         x.style.display = "none";
+        y.style.display = "none";  
+    } else {
+        z.style.display = "none";
         y.style.display = "block"; 
+        x.style.display = "none"; 
+    }
+}
+
+function toggleHome() {
+    var x = document.getElementById("displayconnect");
+    var y = document.getElementById("displayupload");
+    var z = document.getElementById("allimagescontainer");
+    if (x.style.display === "block" | y.style.display === "block") {
+        x.style.display = "none";
+        y.style.display = "none"; 
+        z.style.display = "block"; 
     } 
 }
 
 document.getElementById("defaultOpen").click();
- function myFunction(id) {
-     var x = document.getElementById(id);
-     if (x.className.indexOf("w3-show") == -1) {
-         x.className += " w3-show";
-         x.previousElementSibling.className += " w3-theme-d1";
-     } else {
-         x.className = x.className.replace("w3-show", "");
-         x.previousElementSibling.className =
-             x.previousElementSibling.className.replace(" w3-theme-d1", "");
-     }
- }
 
- function openTabType(evt, TabType) {
-     // Declare all variables
+function openTabType(evt, TabType) {
      var i, tabcontent, tablinks;
 
-     // Get all elements with class="tabcontent" and hide them
      tabcontent = document.getElementsByClassName("tabcontent");
      for (i = 0; i < tabcontent.length; i++) {
          tabcontent[i].style.display = "none";
      }
 
-     // Get all elements with class="tablinks" and remove the class "active"
      tablinks = document.getElementsByClassName("tablinks");
      for (i = 0; i < tablinks.length; i++) {
          tablinks[i].className = tablinks[i].className.replace(" active", "");
      }
 
-     // Show the current tab, and add an "active" class to the button that opened the tab
      document.getElementById(TabType).style.display = "block";
      evt.currentTarget.className += " active";
  }
