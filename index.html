@@ -44,7 +44,7 @@
               </ul>
               <form class="form-inline my-2 my-lg-0">
               <input class="form-control mr-sm-2 search-bar jackInTheBox" type="search" placeholder="Search images, users..">
-              <button class="btn btn-outline-success my-2 my-sm-0 searchnavbtn jackInTheBox" type="submit"><i class="fas fa-search"></i></button>
+              <button class="btn btn-outline-success my-2 my-sm-0 searchnavbtn" type="submit"><i class="fas fa-search"></i></button>
               </form>
               </div>
            </div>
@@ -63,12 +63,13 @@
                     <form class="formconnect register-form">
                        <input type="text" placeholder="email address"/>  
                        <input type="text" placeholder="username"/>
-                       <input type="password" placeholder="password"/>
+                       <input type="password" placeholder="password" id="register-pass"/>
+                       <div class="showpass-area showpassicon"><i class="fas fa-eye"></i>&nbsp;Show Password</div>
                        <button class="cb">Register</button>
                        <p class="message">Already registered? <a class="tct" href="#">Sign In</a></p>
                     </form>
                     <form class="formconnect login-form">
-                       <input type="text" placeholder="username"/>
+                       <input type="text" placeholder="username/email"/>
                        <input type="password" placeholder="password"/>
                        <button class="cb">Login</button>
                        <p class="message">Not registered? <a class="tct" href="#">Create an account</a></p>

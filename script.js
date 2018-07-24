@@ -110,3 +110,12 @@ $('.message .tct').click(function(){
 $('.nav-link').on('click', function(){
     $('#navbarTogglerDemo02').collapse('hide');
 });
+
+$(".showpassicon").hover(function(){
+    var x = document.getElementById("register-pass");
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
+});

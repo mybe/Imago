@@ -57,7 +57,7 @@ body { font-family: "Arial", sans-serif !important; max-width: 100%; overflow-x:
     .navbar-expand-custom .navbar-toggler { display: none; }
 }
 
-.form { position: relative; z-index: 1; background: #FFFFFF; max-width: 350px; margin: 0 auto 100px; padding: 30px; margin-top: 125px; }
+.form { position: relative; z-index: 1; background: #FFFFFF; max-width: 350px; margin: 0 auto 100px; padding: 15px; margin-top: 125px; }
 .form { border-radius: 10px; text-align: center; }
 .form .thumbnail { background: #EF3B3A; width: 150px; height: 150px; margin: 0 auto 30px; padding: 50px 30px; }
 .form .thumbnail { border-radius: 100%;  box-sizing: border-box; }
@@ -71,7 +71,7 @@ body { font-family: "Arial", sans-serif !important; max-width: 100%; overflow-x:
 .form .register-form { display: none; }
 .container { position: relative; z-index: 1; max-width: 300px; margin: 0 auto; }
 .container:before, .container:after { content: ""; display: block; clear: both; }
-.container .info { margin: 20px 30px 50px 30px; text-align: center; }
+.container .info { margin: 10px 20px 20px 20px; text-align: center; }
 .container .info h1 { margin: 0 0 15px; padding: 0; font-size: 36px; font-weight: 300; color: #1a1a1a; }
 .container .info span { color: #4d4d4d; font-size: 12px; }
 .container .info span a { color: #000000; text-decoration: none; }
@@ -80,6 +80,11 @@ body { font-family: "Arial", sans-serif !important; max-width: 100%; overflow-x:
 .connect-master { content: ""; position: fixed; top: 0; left: 0; display: block; background: rgba(204, 204, 204, 0.3); width: 100%; height: 100%; }
 .container-fluid { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); }
 
+.showpass-area { margin-bottom: 12px; font-size: 14px; color: #1e6610; max-width: 200px; display: inline-block; }
+.showpass-area:hover { color: #a80000; }
+
+.fa-eye { color: #1e6610; } .showpass-area:hover .fa-eye { color: #a80000; }
+
 @keyframes fadeInUp {
     from { opacity: 0; transform: translate3d(0, 50%, 0); }
     to { opacity: 1; transform: translate3d(0, 0, 0); }}
@@ -87,15 +92,5 @@ body { font-family: "Arial", sans-serif !important; max-width: 100%; overflow-x:
 @keyframes fadeInDown {
     from { opacity: 0; transform: translate3d(0, -50%, 0); }
     to { opacity: 1; transform: translate3d(0, 0, 0); }}
-
-@keyframes fadeInLeft {
-    from { opacity: 0; transform: translate3d(50%, 0, 0); }
-    to { opacity: 1; transform: translate3d(0, 0, 0); }}
-
-@keyframes jackInTheBox {
-    from { opacity: 0; transform: scale(0.1) rotate(20deg); transform-origin: center bottom; }
-    50% { transform: rotate(-10deg); } 70% { transform: rotate(3deg); }
-    to { opacity: 1; transform: scale(1); }}
   
 .fadeInUp { animation-name: fadeInUp; animation-duration: 0.75s; } .fadeInDown { animation-name: fadeInDown; animation-duration: 0.75s; } 
-.jackInTheBox { animation-name: jackInTheBox; animation-duration: 1s; }
