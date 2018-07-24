@@ -107,3 +107,7 @@ window.addEventListener('load', refresh_handler);
 $('.message .tct').click(function(){
     $('.formconnect').animate({height: "toggle", opacity: "toggle"}, "slow");
  });
+
+$('.nav-link').on('click', function(){
+    $('#navbarTogglerDemo02').collapse('hide');
+});
