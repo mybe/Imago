@@ -124,3 +124,40 @@ $(".showpassicon").hover(function(){
         x.type = "password";
     }
 });
+
+var executed = false;
+var image = new Image();
+
+var previewFiles = (function() {
+    return function() {
+        if (!executed) {
+            executed = true;
+            var preview = document.querySelector('#preview');
+            var files   = document.querySelector('input[type=file]').files;
+            function readAndPreview(file) {
+              // Make sure `file.name` matches our extensions criteria
+              if ( /\.(jpe?g|png)$/i.test(file.name) ) {
+                var reader = new FileReader();
+                reader.addEventListener("load", function () {                 
+                  image.height = 300; image.title = file.name; image.src = this.result; preview.appendChild( image );
+                }, false);
+                reader.readAsDataURL(file);
+                $("#preview").html(image);
+              } else { alert("Wrong file type. Accepted types: PNG, JPG, JPEG"); executed = false; }
+               }
+              
+            if (files) {
+              [].forEach.call(files, readAndPreview);
+            }
+        } else { alert("You may only upload one image");}
+    };
+})();
+
+function removeFile() {
+    if (executed === true) { 
+        executed = false;
+        delete image; 
+        $("#preview").html("");
+       // alert("Removed your image");
+    } else { alert("You have no image to remove!"); }
+}

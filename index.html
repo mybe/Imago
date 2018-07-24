@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,500|Lato'>
         <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> 
@@ -53,12 +53,12 @@
         </nav><br><div class="bottomnavmargin"></div>
 
         <div id="displayconnect" class="collapse">
-           <div class="connect-master">
-              <div class="container-fluid">
+           <div class="connectbk">
+              <div class="connect-master">
                  <div class="form">
                     <div class="container">
                        <div class="info">
-                          <h1>Login to Imago</h1>
+                          <h1 class="typetitle">Login to Imago</h1>
                        </div>
                     </div>
                     <form class="formconnect register-form">
@@ -80,21 +80,29 @@
            </div>
            <a style="text-decoration: none" href="#" onclick="toggleHome()" class="close2">&times;</a>
         </div>
-
         <div id="displayupload" class="collapse">
-                <div class="connect-master">
-                   <div class="container-fluid">
-                      <div class="form">
-                         <div class="container">
-                            <div class="info">
-                               <h1>Upload</h1>
-                            </div>
-                         </div>
-                      </div>
-                   </div>
-                </div>
+            <div class="uploadbk">  
+                <div class="upload-master">
+                    <div class="info">
+                        <h1 class="typetitle">Upload an Image</h1>
+                    </div>
+                    <div id="wrapper">
+                    <label for="file-upload" class="custom-file-upload">
+                        <i class="fa fa-cloud-upload"></i>&nbsp;Upload Image
+                    </label>
+                    <input id="file-upload" type="file" onchange="previewFiles()"/>
+                    <label class="custom-file-remove" onclick="removeFile()">
+                        <i class="far fa-trash-alt"></i>&nbsp;Remove Image
+                    </label>
+                    </div>
+                    <div class="upload-area">
+                        <div id="preview"></div><br>
+                    </div>
+                    <button class="upload-btn">Upload</button>     
+                </div>           
                 <a style="text-decoration: none" href="#" onclick="toggleHome()" class="close2">&times;</a>
-             </div>
+            </div>
+        </div>
 
         <div id="allimagescontainer">
            <!-- Trending and New Tab -->
