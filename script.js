@@ -53,7 +53,7 @@ document.getElementById("defaultOpen").click();
      evt.currentTarget.className += " active";
  }
 
- // New
+ // New Images Tab
  var modalNew = document.getElementById('mCxNew');
  var imagesNew = document.getElementsByClassName('imagemCxNew');
  var modalImgNew = document.getElementById("imIDxNew");
@@ -71,7 +71,7 @@ document.getElementById("defaultOpen").click();
      modalNew.style.display = "none";
  }
 
- // Trend
+ // Trend Images Tab
  var modalTrend = document.getElementById('mCxTrend');
  var imagesTrend = document.getElementsByClassName('imagemCxTrend');
  var modalImgTrend = document.getElementById("imIDxTrend");
@@ -102,7 +102,6 @@ refresh_handler = function (e) {
 
 window.addEventListener('scroll', refresh_handler);
 window.addEventListener('load', refresh_handler);
-
 
 $('.message .tct').click(function(){
     $('.formconnect').animate({height: "toggle", opacity: "toggle"}, "slow");
