@@ -72,7 +72,7 @@ body { font-family: "Arial", sans-serif !important; max-width: 100%; overflow-x:
 .info { margin: 10px 20px 20px 20px; text-align: center; }
 .info h1 { margin: 0 0 15px; padding: 0; font-size: 36px; font-weight: 300; color: #1a1a1a; }
 .connect-master { margin: 0 auto; padding: 5px; background: #fff; }
-.connect-master { margin-top: 150px; margin-bottom: 50px; height: auto; border-radius: 10px; width: 100%; max-width: 450px; }
+.connect-master { margin-top: 150px; margin-bottom: 50px; height: auto; border-radius: 10px; width: 90%; max-width: 450px; }
 .connectbk { background: rgba(204, 204, 204, 0.3); position: absolute; top: 0; left: 0; min-width: 100%; min-height: 100%; }
 
 .showpass-area { margin-bottom: 12px; font-size: 14px; color: #1e6610; max-width: 200px; display: inline-block; }
@@ -81,7 +81,7 @@ body { font-family: "Arial", sans-serif !important; max-width: 100%; overflow-x:
 
 .uploadbk { background: rgba(204, 204, 204, 0.3); position: absolute; top: 0; left: 0; min-width: 100%; min-height: 100%; }
 .upload-master { height: auto; margin: 0 auto; padding: 25px; background: #fff; }
-.upload-master { margin-top: 150px; margin-bottom: 50px; border-radius: 10px; width: 100%; max-width: 450px; }
+.upload-master { margin-top: 150px; margin-bottom: 50px; border-radius: 10px; width: 90%; max-width: 450px; }
 .upload-area { height: auto; margin: 0 auto; border: 2px dashed gray; padding: 15px 5px 5px 5px; }
 #preview img { max-width: 100% !important; height: auto; max-height: 350px; border-radius: 5px; padding: 10px; display: block; margin: 0 auto; }
 .upload-btn { outline: 0; width: 100%; border: 0; padding: 15px; border-radius: 3px; }
