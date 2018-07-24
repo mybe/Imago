@@ -43,8 +43,8 @@
                  </li>
               </ul>
               <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2 search-bar" type="search" placeholder="Search images, users..">
-              <button class="btn btn-outline-success my-2 my-sm-0 searchnavbtn" type="submit"><i class="fas fa-search"></i></button>
+              <input class="form-control mr-sm-2 search-bar jackInTheBox" type="search" placeholder="Search images, users..">
+              <button class="btn btn-outline-success my-2 my-sm-0 searchnavbtn jackInTheBox" type="submit"><i class="fas fa-search"></i></button>
               </form>
               </div>
            </div>
@@ -81,14 +81,14 @@
         <div id="allimagescontainer">
            <!-- Trending and New Tab -->
            <div class="tab">
-              <button class="tablinks" onclick="openTabType(event, 'Trending-TabType')" id="defaultOpen">Trending</button>
-              <button class="tablinks" onclick="openTabType(event, 'New-TabType')">New</button>
+              <button class="tablinks fadeInUp" onclick="openTabType(event, 'Trending-TabType')" id="defaultOpen">Trending</button>
+              <button class="tablinks fadeInUp" onclick="openTabType(event, 'New-TabType')">New</button>
            </div>
            <div class="bottomtabsmargin"></div>
            <br>
            <!-- New images -->
            <div id="New-TabType" class="tabcontent">
-              <h3 class="tabtitle">New Images</h3>
+              <h3 class="tabtitle fadeInDown">New Images</h3>
               <div id="mCxNew" class="modal">
                  <a style="text-decoration: none" href="#" class="closeNew">&times;</a><img class="modal-content" id="imIDxNew">
                  <div id="captionNew"></div>
@@ -98,32 +98,32 @@
                  <div class="column">
                     <img class="imagemCxNew frm-image" id="imgx" src="images/1.jpg" alt="Image Description">
                     <img class="imagemCxNew frm-image" id="imgx" src="images/2.jpg" alt="Image Description">
-                    <img class="imagemCxNew frm-image" id="imgx" src="images/3.jpg" alt="Image Description">
+                 <!--   <img class="imagemCxNew frm-image" id="imgx" src="images/3.jpg" alt="Image Description">
                     <img class="imagemCxNew frm-image" id="imgx" src="images/10.jpg" alt="Image Description">
                     <img class="imagemCxNew frm-image" id="imgx" src="images/11.jpg" alt="Image Description">
-                    <img class="imagemCxNew frm-image" id="imgx" src="images/12.jpg" alt="Image Description">
+                    <img class="imagemCxNew frm-image" id="imgx" src="images/12.jpg" alt="Image Description">-->
                  </div>
                  <div class="column">
                     <img class="imagemCxNew frm-image" id="imgx" src="images/4.jpg" alt="Image Description">
                     <img class="imagemCxNew frm-image" id="imgx" src="images/5.jpg" alt="Image Description">
-                    <img class="imagemCxNew frm-image" id="imgx" src="images/6.jpg" alt="Image Description">
+                   <!-- <img class="imagemCxNew frm-image" id="imgx" src="images/6.jpg" alt="Image Description">
                     <img class="imagemCxNew frm-image" id="imgx" src="images/13.jpg" alt="Image Description">
                     <img class="imagemCxNew frm-image" id="imgx" src="images/14.jpg" alt="Image Description">
-                    <img class="imagemCxNew frm-image" id="imgx" src="images/15.jpg" alt="Image Description">
+                    <img class="imagemCxNew frm-image" id="imgx" src="images/15.jpg" alt="Image Description">-->
                  </div>
                  <div class="column">
                     <img class="imagemCxNew frm-image" id="imgx" src="images/7.jpg" alt="Image Description">
                     <img class="imagemCxNew frm-image" id="imgx" src="images/8.jpg" alt="Image Description">
-                    <img class="imagemCxNew frm-image" id="imgx" src="images/9.jpg" alt="Image Description">
+                  <!--  <img class="imagemCxNew frm-image" id="imgx" src="images/9.jpg" alt="Image Description">
                     <img class="imagemCxNew frm-image" id="imgx" src="images/16.jpg" alt="Image Description">
                     <img class="imagemCxNew frm-image" id="imgx" src="images/17.jpg" alt="Image Description">
-                    <img class="imagemCxNew frm-image" id="imgx" src="images/18.jpg" alt="Image Description">
+                    <img class="imagemCxNew frm-image" id="imgx" src="images/18.jpg" alt="Image Description">-->
                  </div>
               </div>
            </div>
            <!-- Trending images -->
            <div id="Trending-TabType" class="tabcontent">
-              <h3 class="tabtitle">Trending Images</h3>
+              <h3 class="tabtitle fadeInDown">Trending Images</h3>
               <div id="mCxTrend" class="modal">
                  <a style="text-decoration: none" href="#" class="closeTrend">&times;</a><img class="modal-content" id="imIDxTrend">
                  <div id="captionTrend"></div>
@@ -133,29 +133,29 @@
                  <div class="column">
                     <img class="imagemCxTrend frm-image" id="imgx" src="images/15.jpg" alt="Building">
                     <img class="imagemCxTrend frm-image" id="imgx" src="images/11.jpg" alt="Motorcyclist by Mountain">
-                    <img class="imagemCxTrend frm-image" id="imgx" src="images/3.jpg" alt="Image Description">
+                   <!-- <img class="imagemCxTrend frm-image" id="imgx" src="images/3.jpg" alt="Image Description">
                     <img class="imagemCxTrend frm-image" id="imgx" src="images/4.jpg" alt="Image Description">
                     <img class="imagemCxTrend frm-image" id="imgx" src="images/5.jpg" alt="Image Description">
                     <img class="imagemCxTrend frm-image" id="imgx" src="images/6.jpg" alt="Image Description">
-                    <img class="imagemCxTrend frm-image" id="imgx" src="images/17.jpg" alt="Image Description">
+                    <img class="imagemCxTrend frm-image" id="imgx" src="images/17.jpg" alt="Image Description">-->
                  </div>
                  <div class="column">
                     <img class="imagemCxTrend frm-image" id="imgx" src="images/8.jpg" alt="City">
                     <img class="imagemCxTrend frm-image" id="imgx" src="images/9.jpg" alt="Image Description">
-                    <img class="imagemCxTrend frm-image" id="imgx" src="images/10.jpg" alt="Image Description">
+                  <!--  <img class="imagemCxTrend frm-image" id="imgx" src="images/10.jpg" alt="Image Description">
                     <img class="imagemCxTrend frm-image" id="imgx" src="images/21.jpg" alt="Image Description">
                     <img class="imagemCxTrend frm-image" id="imgx" src="images/12.jpg" alt="Image Description">
                     <img class="imagemCxTrend frm-image" id="imgx" src="images/13.jpg" alt="Image Description">
-                    <img class="imagemCxTrend frm-image" id="imgx" src="images/2.jpg" alt="Image Description">
+                    <img class="imagemCxTrend frm-image" id="imgx" src="images/2.jpg" alt="Image Description">-->
                  </div>
                  <div class="column">
                     <img class="imagemCxTrend frm-image" id="imgx" src="images/1.jpg" alt="Window">
                     <img class="imagemCxTrend frm-image" id="imgx" src="images/16.jpg" alt="Image Description">
-                    <img class="imagemCxTrend frm-image" id="imgx" src="images/7.jpg" alt="Image Description">
+                <!--    <img class="imagemCxTrend frm-image" id="imgx" src="images/7.jpg" alt="Image Description">
                     <img class="imagemCxTrend frm-image" id="imgx" src="images/18.jpg" alt="Image Description">
                     <img class="imagemCxTrend frm-image" id="imgx" src="images/19.jpg" alt="Image Description">
                     <img class="imagemCxTrend frm-image" id="imgx" src="images/20.jpg" alt="Image Description">
-                    <img class="imagemCxTrend frm-image" id="imgx" src="images/14.jpg" alt="Image Description">
+                    <img class="imagemCxTrend frm-image" id="imgx" src="images/14.jpg" alt="Image Description">-->
                  </div>
               </div>
            </div>
