@@ -12,8 +12,7 @@
         <link rel="icon" type="image/png" href="assets/favicon.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-        <script src="csi.js-master\csi.min.js"></script>       
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>      
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
@@ -37,7 +36,8 @@
                     <i class="fas fa-home"></i><a class="nav-link ultext" href="#" onclick="toggleHome()">&nbsp;Home</a>
                  </li>
                  <li class="nav-item">
-                    <i class="fas fa-user user-icon"></i><a href="#" class="nav-link ultext" onclick="displayConnect()">&nbsp;Sign Up/Login</a>
+                    <div id="navsignup"><i class="fas fa-user user-icon"></i><a href="#" class="nav-link ultext" onclick="displayConnect()">&nbsp;Sign Up/Login</a></div>
+                    <div id="navaccount"><i class="fas fa-user user-icon"></i><a href="#" id="accountreplace" class="nav-link ultext" onclick="displayAccount()">&nbsp;My Account (User)</a></div>
                  </li>
                  <li class="nav-item">
                     <div class="upload-class">
@@ -88,15 +88,28 @@
                        <div id="reg-msg"><p class="message">Already registered? <a class="tct" href="#">Sign In</a></p></div>
                     </form>
                     <form class="formconnect login-form">
-                       <input type="text" placeholder="username/email"/>
-                       <input type="password" placeholder="password"/>
-                       <button class="cb">Login</button>
-                       <p class="message">Not registered? <a class="tct" href="#">Create an account</a></p>
+                       <div id="hideonlogin">
+                            <input type="text" placeholder="username/email" id="log-usernameoremail"/>
+                            <input type="password" placeholder="password" id="log-pass"/>
+                            <p id="logerror-fail">Username, email or password is incorrect.</p>
+                       </div>
+                       <p id="log-success">Welcome back to Imago</p>
+                       <p id="log-redir">Redirecting you...</p>
+                       <button id="login1" class="cb" onclick="loginUser()">Login</button>
+                       <p id="log-msg" class="message">Not registered? <a class="tct" href="#">Create an account</a></p>
                     </form>
                  </div>
               </div>
            </div>
            <a style="text-decoration: none" href="#" onclick="toggleHome()" class="close2">&times;</a>
+        </div>
+
+        <div id="displayaccount" class="collapse">
+            <div class="uploadbk">  
+                <div class="upload-master">
+                    <p>Account page</p>
+                </div>
+            </div>
         </div>
         
         <div id="displayupload" class="collapse">

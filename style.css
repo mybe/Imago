@@ -131,7 +131,7 @@ input[type="file"] { display: none; }
 .toscontainer .checkmark:after { -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); }
 
 #tos-agreehide { display: none; margin: 25px; margin-top: -10px; }
-#register2, #reg-goback, #loader, #reg-redir { display: none; }
+#register2, #reg-goback, #loader, #reg-redir, #log-redir, #navaccount { display: none; }
 .message2 { margin: 15px 0 0; color: #2b5eaf; font-size: 16px; }
 
 #reg-redir { font-size: 18px; color: #2b5eaf; }
@@ -140,5 +140,10 @@ input[type="file"] { display: none; }
 #loader { animation: spin 1.5s linear infinite; border-top: 8px solid #16992a; border-bottom: 8px solid #16992a; }
 @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 
-#regerror-1, #regerror-2, #regerror-3, #regerror-4, #regerror-fail, #reg-rereg { display: none; font-size: 19px; color: #e53935; margin-top: 10px; line-height: 20px; }
-#regerror-fail { font-weight: bold; } #reg-success { display: none; font-size: 27px; color: #1e6610; margin: 15px; }
+#regerror-1, #regerror-2, #regerror-3, #regerror-4 { display: none; font-size: 19px; color: #e53935; margin-top: 10px; line-height: 20px; }
+#regerror-fail, #reg-rereg, #logerror-fail { display: none; font-size: 19px; color: #e53935; margin-top: 10px; line-height: 20px; }
+#regerror-fail, #logerror-fail { font-weight: bold; } 
+#reg-success, #log-success { display: none; font-size: 27px; color: #1e6610; margin: 15px; }
+#logerror-fail { margin: 15px; }
+
+#log-redir { font-size: 18px; color: #2b5eaf; }

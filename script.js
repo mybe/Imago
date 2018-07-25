@@ -1,40 +1,64 @@
 function displayConnect() {
     var x = document.getElementById("displayconnect");
+    var x2 = document.getElementById("displayaccount");
     var y = document.getElementById("displayupload");
     var z = document.getElementById("allimagescontainer");
     if (z.style.display === "none" & y.style.display === "none") {
         z.style.display = "block";
-        x.style.display = "none";
+        x.style.display = "none"; x2.style.display = "none";
         y.style.display = "none";  
     } else {
         z.style.display = "none";
         y.style.display = "none";  
+        x2.style.display="none";
         x.style.display = "block"; 
+    }
+}
+
+function displayAccount() {
+    var x = document.getElementById("displayconnect");
+    var x2 = document.getElementById("displayaccount");
+    var y = document.getElementById("displayupload");
+    var z = document.getElementById("allimagescontainer");
+    if (z.style.display === "none" & y.style.display === "none") {
+        z.style.display = "block";
+        x.style.display = "none"; x2.style.display = "none";
+        y.style.display = "none";  
+    } else {
+        z.style.display = "none";
+        y.style.display = "none";  
+        x.style.display="none";
+        x2.style.display = "block"; 
     }
 }
 
 function displayUpload() {
     var x = document.getElementById("displayconnect");
+    var x2 = document.getElementById("displayaccount");
     var y = document.getElementById("displayupload");
     var z = document.getElementById("allimagescontainer");
-    if (z.style.display === "none" & x.style.display === "none") {
+    if (z.style.display === "none" & x.style.display === "none" & x2.style.display === "none") {
         z.style.display = "block";
         x.style.display = "none";
+        x2.style.display = "none";
         y.style.display = "none";  
     } else {
         z.style.display = "none";
         y.style.display = "block"; 
         x.style.display = "none"; 
+        x2.style.display = "none"; 
     }
 }
 
 function toggleHome() {
     var x = document.getElementById("displayconnect");
+    var x2 = document.getElementById("displayaccount");
     var y = document.getElementById("displayupload");
     var z = document.getElementById("allimagescontainer");
-    if (x.style.display === "block" | y.style.display === "block") {
+    if (x.style.display === "block" | y.style.display === "block" | x2.style.display === "block") {
         x.style.display = "none";
         y.style.display = "none"; 
+        x2.style.display = "none"; 
         z.style.display = "block"; 
     } 
 }
@@ -161,6 +185,47 @@ function removeFile() {
     } else { alert("You have no image to remove!"); }
 }
 
+// Login
+
+function loginUser() {
+    document.getElementById("logerror-fail").style.display = "none";
+    var userNameOrEmail = document.getElementById("log-usernameoremail").value;
+    var userPass = document.getElementById("log-pass").value;
+
+    // example
+    var userList = { 
+        "username" : "frog",
+        "email" : "frog@email.com",
+        "pass" : "abcd1234"
+      }
+
+    if (userNameOrEmail === userList.username | userNameOrEmail === userList.email && (userPass === userList.pass)) {
+        document.getElementById("hideonlogin").style.display = "none";
+        document.getElementById("login1").style.display = "none";
+        document.getElementById("log-msg").style.display = "none";
+        document.getElementById("log-redir").style.display = "block";
+        document.getElementById("log-success").style.display = "block";
+
+        document.getElementById("log-success").innerHTML = 'Welcome back, ' + userList.username + '!';
+
+        setTimeout(function () {
+            var x = document.getElementById("displayconnect");
+            var z = document.getElementById("allimagescontainer");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+                z.style.display = "block"; 
+            } 
+
+            document.getElementById("navsignup").style.display = "none";
+            document.getElementById("navaccount").style.display = "block"; 
+
+            document.getElementById("accountreplace").innerHTML = 'My Account (' + userList.username + ')';
+        }, 2500);
+       clearTimeout();
+
+    } else { document.getElementById("logerror-fail").style.display = "block"; }
+}
+
 // Registering
 function registerUserStart() { 
 
@@ -186,7 +251,7 @@ function registerUserStart() {
     if (userPassword.length < 8) { 
         document.getElementById("regerror-3").style.display = "block";
     }
-    if (userName.length > 4 & (emailValid === true) & (userPassword.length > 7)) {
+    if (userName.length > 3 & (emailValid === true) & (userPassword.length > 7)) {
        document.getElementById("tos-agreehide").style.display = "block";
        document.getElementById("register2").style.display = "block";
        document.getElementById("reg-goback").style.display = "block";
@@ -221,6 +286,13 @@ function registerUserFinish() {
             document.getElementById("reg-success").style.display = "none";
             document.getElementById("reg-rereg").style.display = "block";
             document.getElementById("reg-msg").style.display = "none";
+
+            document.getElementById("navsignup").style.display = "none";
+            document.getElementById("navaccount").style.display = "block"; 
+
+            var userName = document.getElementById("reg-username").value;
+            document.getElementById("accountreplace").innerHTML = 'My Account (' + userName + ')';
+
         }, 4800);
         clearTimeout();
 
