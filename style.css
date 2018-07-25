@@ -75,7 +75,7 @@ body { font-family: "Arial", sans-serif !important; max-width: 100%; overflow-x:
 .connect-master { margin-top: 150px; margin-bottom: 50px; height: auto; border-radius: 10px; width: 90%; max-width: 450px; }
 .connectbk { background: rgba(204, 204, 204, 0.3); position: absolute; top: 0; left: 0; min-width: 100%; min-height: 100%; }
 
-.showpass-area { margin-bottom: 12px; font-size: 14px; color: #1e6610; max-width: 200px; display: inline-block; }
+.showpass-area { margin-bottom: 12px; font-size: 14px; color: #1e6610; max-width: 200px; display: inline-block; float: right; }
 .showpass-area:hover { color: #a80000; }
 .fa-eye { color: #1e6610; } .showpass-area:hover .fa-eye { color: #a80000; }
 
@@ -117,3 +117,22 @@ input[type="file"] { display: none; }
     to { opacity: 1; transform: translate3d(0, 0, 0); }}
   
 .fadeInUp { animation-name: fadeInUp; animation-duration: 0.75s; } .fadeInDown { animation-name: fadeInDown; animation-duration: 0.75s; } 
+
+#tosagree-text { margin-left: 25px; }
+.container-chbox { position: relative; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; }
+.container-chbox { -ms-user-select: none; user-select: none; font-family: 'Roboto'; font-size: 18px; }
+.container-chbox input { opacity: 0; cursor: pointer; } /* Hide the browser's default checkbox */
+.checkmark-chbox { position: absolute; left: 0; height: 20px; width: 20px; background-color: #eee; } 
+.container-chbox:hover input ~ .checkmark-chbox { background-color: #ccc; } /* On mouse-over, add a grey background color */
+.container-chbox input:checked ~ .checkmark-chbox { background-color: #7652c4; } /* When the checkbox is checked, add a blue background */
+.checkmark-chbox:after { content: ""; position: absolute; display: none; } /* Create the checkmark/indicator (hidden when not checked) */
+.container-chbox input:checked ~ .checkmark-chbox:after { display: block; } /* Show the checkmark when checked */
+.container-chbox .checkmark-chbox:after { left: 7px; top: 5px; width: 5px; height: 10px; border: solid white; }
+.container-chbox .checkmark-chbox:after { border-width: 0 3px 3px 0; -webkit-transform: rotate(45deg);  -ms-transform: rotate(45deg); transform: rotate(45deg); }
+
+
+#tos-agreehide { display: none; margin: 25px; margin-top: -10px; }
+#register2 { display: none; }
+#reg-goback { display: none; }
+
+.message2 { margin: 15px 0 0; color: #2b5eaf; font-size: 16px; }

@@ -117,7 +117,7 @@ $('.nav-link').on('click', function(){
 });
 
 $(".showpassicon").hover(function(){
-    var x = document.getElementById("register-pass");
+    var x = document.getElementById("reg-pass");
     if (x.type === "password") {
         x.type = "text";
     } else {
@@ -160,4 +160,49 @@ function removeFile() {
         $("#preview").html("");
        // alert("Removed your image");
     } else { alert("You have no image to remove!"); }
+}
+
+// Login stuffs
+
+function registerUserStart() { 
+    var userName = document.getElementById("reg-username").value;
+    var userEmail = document.getElementById("reg-email").value;
+    var userPassword = document.getElementById("reg-pass").value;
+    var emailValid = Boolean(false);
+
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(userEmail)) {
+        emailValid = true;
+    } else {
+        alert("You have entered an invalid email address!")
+        emailValid = false;
+    }
+    if (userName.length < 4) { 
+       alert("Your username is invalid!");
+    } 
+    if (userPassword.length < 8) { 
+        alert("Your password must be at least 8 characters long.");
+    }
+    if (userName.length > 4 & (emailValid === true) & (userPassword.length > 7)) {
+       //alert("Registering as: " + userName + " / " + userEmail);
+       document.getElementById("tos-agreehide").style.display = "block";
+       document.getElementById("register2").style.display = "block";
+       document.getElementById("reg-goback").style.display = "block";
+       document.getElementById("register1").style.display = "none";
+       document.getElementById("hideonregister").style.display = "none";
+
+    } else { alert("Failed to register you."); }
+}
+
+function registerUserFinish() {
+    if (document.getElementById("reg-agreetos").checked === true) {
+        alert("Signing you up..."); 
+    } else { alert("You must agree to the terms of service before continuing."); }
+}
+
+function registerGoBack() { 
+    document.getElementById("tos-agreehide").style.display = "none";
+    document.getElementById("register2").style.display = "none";
+    document.getElementById("reg-goback").style.display = "none";
+    document.getElementById("register1").style.display = "block";
+    document.getElementById("hideonregister").style.display = "block";
 }
