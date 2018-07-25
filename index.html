@@ -64,17 +64,25 @@
                     <form class="formconnect register-form">
                         <div id="tos-agreehide"><label id="register-reqs" class="container-chbox"><input type="checkbox" id="reg-agreetos">
                             <span class="checkmark-chbox"></span><p id="tosagree-text">I agree to the <a href="/privacy/">TOS</a></p>
-                        </label></div>
+                        </label><br><br><p id="regerror-4">You must agree to the Terms of Service.</p></div>
                         <div id="hideonregister">
                             <input type="text" placeholder="email address" id="reg-email"/>  
                             <input type="text" placeholder="username" id="reg-username"/>
                             <input type="password" placeholder="password" id="reg-pass"/>
                             <div class="showpass-area showpassicon"><i class="fas fa-eye"></i>&nbsp;Show Password</div>
+                            <br><br><p id="regerror-fail">Failed to sign you up!</p>
+                            <p id="regerror-1">&bull;&nbsp;Your email is invalid</p>
+                            <p id="regerror-2">&bull;&nbsp;Your username must be at least 4 characters</p>
+                            <p id="regerror-3">&bull;&nbsp;Your password must be at least 8 characters</p><br>
                         </div>
                        <button id="register1" class="cb" onclick="registerUserStart()">Register</button>
+                       <div id="loader"></div>
+                       <p id="reg-success">Your account has been created!</p>
+                       <p id="reg-redir">Redirecting you...</p>
+                       <p id="reg-rereg">You are already logged in.</p>
                        <button id="register2" class="cb" onclick="registerUserFinish()">Register</button>
                        <a id="reg-goback" class="message2" href="#" onclick="registerGoBack()">&#8592; Go back</a>
-                       <p class="message">Already registered? <a class="tct" href="#">Sign In</a></p>
+                       <div id="reg-msg"><p class="message">Already registered? <a class="tct" href="#">Sign In</a></p></div>
                     </form>
                     <form class="formconnect login-form">
                        <input type="text" placeholder="username/email"/>

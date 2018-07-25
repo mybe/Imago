@@ -158,13 +158,17 @@ function removeFile() {
         executed = false;
         delete image; 
         $("#preview").html("");
-       // alert("Removed your image");
     } else { alert("You have no image to remove!"); }
 }
 
-// Login stuffs
-
+// Registering
 function registerUserStart() { 
+
+    document.getElementById("regerror-1").style.display = "none";
+    document.getElementById("regerror-2").style.display = "none";
+    document.getElementById("regerror-3").style.display = "none";
+    document.getElementById("regerror-fail").style.display = "none";
+
     var userName = document.getElementById("reg-username").value;
     var userEmail = document.getElementById("reg-email").value;
     var userPassword = document.getElementById("reg-pass").value;
@@ -173,30 +177,54 @@ function registerUserStart() {
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(userEmail)) {
         emailValid = true;
     } else {
-        alert("You have entered an invalid email address!")
+        document.getElementById("regerror-1").style.display = "block";
         emailValid = false;
     }
     if (userName.length < 4) { 
-       alert("Your username is invalid!");
+        document.getElementById("regerror-2").style.display = "block";
     } 
     if (userPassword.length < 8) { 
-        alert("Your password must be at least 8 characters long.");
+        document.getElementById("regerror-3").style.display = "block";
     }
     if (userName.length > 4 & (emailValid === true) & (userPassword.length > 7)) {
-       //alert("Registering as: " + userName + " / " + userEmail);
        document.getElementById("tos-agreehide").style.display = "block";
        document.getElementById("register2").style.display = "block";
        document.getElementById("reg-goback").style.display = "block";
        document.getElementById("register1").style.display = "none";
        document.getElementById("hideonregister").style.display = "none";
 
-    } else { alert("Failed to register you."); }
+    } else { document.getElementById("regerror-fail").style.display = "block"; }
 }
 
 function registerUserFinish() {
     if (document.getElementById("reg-agreetos").checked === true) {
-        alert("Signing you up..."); 
-    } else { alert("You must agree to the terms of service before continuing."); }
+        document.getElementById("loader").style.display = "inline-block";
+        document.getElementById("tos-agreehide").style.display = "none";
+        document.getElementById("register2").style.display = "none";
+        document.getElementById("reg-goback").style.display = "none";
+
+        setTimeout(function () {
+            document.getElementById("reg-success").style.display = "block";
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("reg-redir").style.display = "block";
+        }, 2500);
+       clearTimeout();
+
+       setTimeout(function () {
+            var x = document.getElementById("displayconnect");
+            var z = document.getElementById("allimagescontainer");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+                z.style.display = "block"; 
+            } 
+            document.getElementById("reg-redir").style.display = "none";
+            document.getElementById("reg-success").style.display = "none";
+            document.getElementById("reg-rereg").style.display = "block";
+            document.getElementById("reg-msg").style.display = "none";
+        }, 4800);
+        clearTimeout();
+
+    } else { document.getElementById("regerror-4").style.display = "block"; }
 }
 
 function registerGoBack() { 
