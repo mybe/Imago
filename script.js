@@ -167,13 +167,18 @@ var previewFiles = (function() {
                 }, false);
                 reader.readAsDataURL(file);
                 $("#preview").html(image);
-              } else { alert("Wrong file type. Accepted types: PNG, JPG, JPEG"); executed = false; }
+                document.getElementById("uplerror-1").style.display = "none";
+                document.getElementById("uplerror-2").style.display = "none";
+                document.getElementById("uplerror-3").style.display = "none";
+              } else { document.getElementById("uplerror-3").style.display = "block"; 
+                       document.getElementById("uplerror-2").style.display = "none"; document.getElementById("uplerror-1").style.display = "none";
+                       executed = false; }
                }
               
             if (files) {
               [].forEach.call(files, readAndPreview);
             }
-        } else { alert("You may only upload one image");}
+        } else { document.getElementById("uplerror-1").style.display = "block"; }
     };
 })();
 
@@ -182,7 +187,9 @@ function removeFile() {
         executed = false;
         delete image; 
         $("#preview").html("");
-    } else { alert("You have no image to remove!"); }
+        document.getElementById("uplerror-2").style.display = "none";
+        document.getElementById("uplerror-1").style.display = "none";
+    } else { document.getElementById("uplerror-2").style.display = "block"; }
 }
 
 // Login

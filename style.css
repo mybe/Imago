@@ -147,3 +147,5 @@ input[type="file"] { display: none; }
 #logerror-fail { margin: 15px; }
 
 #log-redir { font-size: 18px; color: #2b5eaf; }
+
+#uplerror-1, #uplerror-2, #uplerror-3 { display: none; font-size: 19px; color: #e53935; margin-top: 10px; line-height: 20px; }
