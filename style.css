@@ -52,7 +52,7 @@ body { font-family: "Arial", sans-serif !important; max-width: 100%; overflow-x:
 .ultext:hover:after { width: 100%; }
 .typetitle { font-family: "Lato", sans-serif !important; font-weight: bold; }
 
-@media (min-width: 1200px){
+@media (min-width: 1350px){
     .navbar-expand-custom { flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; }
     .navbar-expand-custom .navbar-nav { flex-direction: row; }
     .navbar-expand-custom .navbar-nav .nav-link { padding-right: .5rem; padding-left: .5rem; }
