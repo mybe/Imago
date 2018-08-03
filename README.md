@@ -27,6 +27,8 @@ Imago is not open to contribution as it is purely for frontend design experiment
 
 * **Henry Jack** 
 
+All photos were taken from Unsplash, credit to their respective authors.
+
 ## License
 
 This project is licensed under the APACHE License.
